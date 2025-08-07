@@ -5,7 +5,6 @@
 }
 .main{
   background-color:#111116;
-
 }
 .dropdown-item:hover{
 background-color: #CA8E46;
@@ -257,6 +256,9 @@ font-size: small;
   margin-top: 100px;
 }
 
+
+
+
 .booktable{
   width: 45%;
   background-color: #18181D;
@@ -373,220 +375,284 @@ opacity: 1 !important;
   background: #121217;
 }
 
+.mtop{
+  margin-top: 5rem !important
+}
+
+.card, .card1, .card2, .card3, .card4,
+.card-2, .card-3, .card-4 {
+  width: 16rem;
+  height: 16rem;
+}
+
+
 /* media query */
-@media only screen and (min-width:1025px){
-  .span-1{
-display: none;
+
+@media (max-width: 991px) {
+  .navbar {
+    padding: 10px 15px;
   }
-  .slide-text{
-   font-size:25px;
-   letter-spacing: 10px;
+
+  .navbar-brand img {
+    width: 120px;
   }
-  .section{
+
+  .navbar-collapse {
+    background-color: black;
+    padding: 10px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  .navbar-nav .dropdown-menu {
+    text-align: center;
+  }
+
+  .navbar-nav .dropdown-menu .dropdown-item {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+
+  .text-warning {
+    display: none !important; /* hide / separator on small screens */
+  }
+
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .navbar {
+    padding: 8px 10px;
+  }
+
+  .navbar-brand img {
+    width: 100px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 15px;
+  }
+
+  .navbar-nav .dropdown-menu .dropdown-item {
+    font-size: 14px;
+  }
+}
+
+/* === Responsive Slider Section === */
+.carousel-img {
+  height: 650px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  bottom: 25%;
+}
+
+.slide-text {
+  font-size: 48px;
+}
+
+.slide-text2 {
+  font-size: 20px;
+}
+
+/* Responsive Styling */
+@media (max-width: 991px) {
+  .carousel-img {
+    height: 500px;
+  }
+
+  .carousel-caption {
+    bottom: 20%;
+    padding: 0 10px;
+  }
+
+  .slide-text {
+    font-size: 32px;
+  }
+
+  .slide-text2 {
+    font-size: 16px;
+  }
+
+  .carousel-caption button {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-img {
+    height: 400px;
+  }
+
+  .carousel-caption {
+    bottom: 18%;
+    text-align: center;
+    padding: 0 8px;
+  }
+
+  .slide-text {
+    font-size: 24px;
+  }
+
+  .slide-text2 {
+    font-size: 14px;
+  }
+
+  .carousel-caption button {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-img {
+    height: 300px;
+  }
+
+  .carousel-caption {
+    bottom: 12%;
+    padding: 0 6px;
+  }
+
+  .slide-text {
+    font-size: 18px;
+  }
+
+  .slide-text2 {
+    font-size: 12px;
+  }
+
+  .carousel-caption button {
+    font-size: 10px;
+    padding: 4px 8px;
+    margin: 4px 2px;
+  }
+}
+
+@media (max-width: 992px) {
+  .section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section .card {
+    width: 100% !important;
+    max-width: 90%; /* optional: thoda left/right gap dene ke liye */
+  }
+}
+
+@media (max-width: 450px) {
+  .section .card-body {
+    text-align: center;
+    padding: 10px;
+  }
+  .section .card-body h6,
+  .section .card-body p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 991px) {
+  .section2 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section2 .left,
+  .section2 .right {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+
+  .section2 .lady-chef {
+    width: 100%;
+    height: auto;
+    max-width: 90%;
+  }
+
+  .section2 .right {
+    padding: 0 1rem;
+    margin-top: 2rem;
+  }
+
+  .section2 .btn1 {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Tablets (up to 991px) */
+@media (max-width: 991px) {
+  .dishes {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .left,
+  .right {
+    width: 100%;
+  }
+  .dishname .dots {
+    display: none; /* dots hatado agar break ho rahe ho */
+  }
+}
+
+/* Mobiles (up to 576px) */
+@media (max-width: 576px) {
+  .dishes {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .left,
+  .right {
+    width: 100%;
+  }
+  .dishname {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .dishname .dots {
+    display: none;
+  }
+}
+
+/* ==== Responsive Footer Fix ==== */
+@media (max-width: 768px) {
+  footer .container {
+    flex-direction: column !important;
+    text-align: center;
+    background-color: #111111;
+  }
+
+  .f-left, .f-center, .f-right {
+    width: 100%;
     justify-content: center;
   }
-  .section2{
-    display: flex;
-    
-    justify-content: center;
+
+  .f-right i {
+    margin: 0 8px;
   }
-.menus-items{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.dishes{
-  display: flex;
-justify-content: flex-start;
-}
-.booktable{
-  width: 600px;
-}
-.sec-7{
-  margin-top: 90px;
-}
-}
 
-@media only screen and (max-width:1024px){
-  .span-1{
-    display: none;
-      }
-      .slide-text{
-       font-size:25px;
-       letter-spacing: 10px;
-      }
-      .section{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .section2{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-    .menus-items{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .dishes{
-      display: flex;
-    justify-content: flex-start;
-    }
-    .booktable{
-      width: 600px;
-    }
-    .dishes{
-      display: flex;
-      flex-wrap: wrap;
-      
-    }
-.left{
-  width: 70%;
-  margin-left: 15px;
-}
-.right{
-  width: 70%;
-}
-.sec-7{
-  margin-top: 90px;
-}
-}
+  .f-center img {
+    width: 120px;
+  }
 
-@media only screen and (max-width:769px){
-  .span-1{
-    display: none;
-      }
-      .slide-text{
-       font-size:25px;
-       letter-spacing: 10px;
-      }
-      .section{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 172%;
-      }
-      .section2{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 172%;
-      }
-    .menus-items{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .dishes{
-      display: flex;
-    justify-content: flex-start;
-    }
-    .booktable{
-      width: 600px;
-    }
-    .dishes{
-      display: flex;
-      flex-wrap: wrap;
-      
-    }
-.left{
-  width: 70%;
-  margin-left: 15px;
+  .arrow-btn {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 }
-.right{
-  width: 70%;
-}
-.sec-7{
-  margin-top: 90px;
-  width: 172%;
-}
-.carousel{
-  width: 172%;
-}
-.section3{
-  width: 172%;
-}
-.section4{
-  width: 172%;
-}
-.section5{
-  width: 172%;
-}
-
-.footer{
-  width: 172%;
-}
-
-}
-
-
-@media only screen and (max-width:502px){
-  .span-1{
-    display: none;
-      }
-      .slide-text{
-       font-size:25px;
-       letter-spacing: 10px;
-      }
-      .section{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 187%;
-      }
-      .section2{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 187%;
-      }
-    .menus-items{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .dishes{
-      display: flex;
-    justify-content: flex-start;
-    }
-    .booktable{
-      width: 600px;
-    }
-    .dishes{
-      display: flex;
-      flex-wrap: wrap;
-      
-    }
-.left{
-  width: 70%;
-  margin-left: 15px;
-}
-.right{
-  width: 70%;
-}
-.sec-7{
-  margin-top: 90px;
-  width: 187%;
-}
-.carousel{
-  width: 187%;
-}
-.section3{
-  width: 187%;
-}
-.section4{
-  width: 187%;
-}
-.section5{
-  width: 187%;
-}
-
-.footer{
-  width: 187%;
-}
-
-} 
